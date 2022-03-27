@@ -4,29 +4,110 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/css/body.css" />
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/b9f096cf12.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Guido Frassetti</title>
   </head>
   <body>
-    <header>Header</header>
-    <section class="banner">
-      <div id="parallax">
-        <div class="layer" data-depth="0.6">
-          <div class="some-space">
-            <h1>Guido Frassetti</h1>
+    <header id="head">
+      <nav id="main-navigation" class="navigation">
+        <a href="#" class="logo">
+          <div class="logo-text">guido<strong>Frassetti</strong></div>
+        </a>
+        <div class="hamburger-menu">
+          <div class="hamburger"></div>
+        </div>
+        <div class="menu-container">
+          <ul class="menu">
+            <li class="menu-link"><a class="link" href="#">Home</a></li>
+            <li class="menu-link"><a class="link" href="#">About</a></li>
+            <li class="menu-link"><a class="link" href="#">Portfolio</a></li>
+            <li class="menu-link"><a class="link" href="#">Contact</a></li>
+            <li class="menu-link menu-line"></li>
+            <ul class="menu-link" style="display: flex; list-style-type: none">
+              <li class="link" href="#">
+                <i class="fa-brands fa-linkedin"></i>
+              </li>
+              <li class="link" href="#">
+                <i class="fa-brands fa-github"></i>
+              </li>
+            </ul>
+          </ul>
+          <div class="menu-info">
+            <p>Buenos Aires, Argentina - guidofrassetti@gmail.com</p>
           </div>
         </div>
-        <div class="layer" data-depth="0.4">
-          <div id="particles-js"></div>
+      </nav>
+    </header>
+    <main>
+      <section class="">
+        <h1 class="parallax">
+          The &lsquo;root element&rsquo; parallax technique
+        </h1>
+
+        <img
+          src="https://source.unsplash.com/category/nature/600x600"
+          class="parallax skyline"
+        />
+        <img
+          src="https://source.unsplash.com/category/buildings/600x600"
+          class="parallax blimp"
+        />
+        <img
+          src="https://source.unsplash.com/category/food/600x600"
+          class="parallax gherkin"
+        />
+        <img
+          src="https://source.unsplash.com/category/people/600x600"
+          class="parallax dino"
+        />
+        <img
+          src="https://source.unsplash.com/category/technology/600x600"
+          class="parallax bull"
+        />
+
+        <div class="parallax box">
+          <p>
+            By combining the power of <code>`rem`</code> and a small JavaScript
+            function to manipulate the <code>`font-size`</code> of the
+            <code>`html`</code> element, we can achieve simple but effective
+            parallaxing.
+          </p>
+          <p>
+            Setting all our positions and parallax movements in CSS, this
+            technique minimises DOM manipulations to just one &ndash; on the
+            <code>`html`</code> element &ndash; boosting overall performance,
+            although certainly not better than using 3D transforms.
+          </p>
+          <p>
+            The speed and direction of each element is set using margins (for
+            this demo I've used <code>`margin-top`</code>). Play around with the
+            numbers yourself to get a better understanding.
+          </p>
+          <p>
+            This is just a proof of concept and hasn't been fully tested, though
+            it should work everywhere that supports <code>`rem`</code> (<a
+              href="http://caniuse.com/#feat=rem"
+              >see here</a
+            >). Using <code>`rem`</code> in this way does have its pitfalls
+            &ndash; most notably the loss of its traditional usage &ndash; but
+            it's a nice trick.
+          </p>
         </div>
-        <div class="layer" data-depth="0.3">
-          <div class="some-more-space"></div>
-        </div>
-      </div>
-    </section>
+
+        <a
+          href="https://codepen.io/amustill/full/aoFIm"
+          target="_blank"
+          class="parallax btn"
+          >View full screen</a
+        >
+      </section>
+    </main>
     <script src="./src/js/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://matthew.wagerfield.com/parallax/deploy/jquery.parallax.js"></script>
-    <script src="./src/js/parallax.js"></script>
+    <script src="./src/js/index.js"></script>
   </body>
 </html>

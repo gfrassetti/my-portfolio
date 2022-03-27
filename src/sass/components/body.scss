@@ -1,85 +1,436 @@
-/* Mouse parallax */
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,100);
-.banner {
-  font-family: "Lato";
-  background: #686868;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  -webkit-font-smoothing: antialiased;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+
+$red: #ce3745;
+
+@mixin menu-opened {
+  $t: 0.1;
+  @for $i from 1 through 6 {
+    $temp: #{0.85 + $t}s;
+
+    .menu-open &:nth-child(#{$i}) {
+      opacity: 1;
+      transition: 0.2s opacity $temp;
+    }
+
+    $t: $t + 0.1;
+  }
 }
 
-#particles-js,
-#parallax,
-.layer,
-.some-space,
-.some-more-space {
-  height: 100%;
-  position: absolute;
-  width: 100%;
-}
-
-#particles-js {
-  opacity: 0.6;
-}
-
-h1 {
+.fa-githb,
+.fa-linkedin-in {
   color: white;
-  font-size: 5em;
-  font-weight: 100;
-  letter-spacing: 0.2em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
+  font-size: 2rem;
+}
+
+.link {
+  color: white;
+  cursor: pointer;
+}
+
+@mixin menu-closed {
+  @for $i from 1 through 6 {
+    $temp: #{$i * 0.05}s;
+
+    &:nth-child(#{$i}) {
+      opacity: 0;
+      transition: 0.2s opacity $temp;
+    }
+  }
+}
+
+body {
+  background: #333;
+  padding-top: 50px;
+  font-family: "Oswald", sans-serif;
+
+  &.menu-open {
+    overflow: hidden;
+  }
 }
 
 a {
-  color: white;
-  border: 1px solid white;
-  display: table;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  letter-spacing: 0.05em;
-  transform: translate3d(-50%, -50%, 0);
   text-decoration: none;
-  transition: all 200ms ease;
-  padding: 10px 15px;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation {
+  .logo {
+    position: fixed;
+    left: 32px;
+    top: 42px;
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 0.3s;
+
+    .logo-text {
+      display: inline-block;
+      font-size: 2rem;
+      background-size: cover;
+      color: #fff;
+      font-family: "Overlock", Arial, Helvetica, sans-serif;
+      font-weight: bolder;
+    }
+  }
+
+  .hamburger-menu {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    padding: 15px 8px;
+    top: 32px;
+    right: 32px;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 1;
+
+    &:hover {
+      .hamburger {
+        &::before {
+          transform: translate(0, -1px);
+        }
+
+        &::after {
+          transform: translate(0, 1px);
+        }
+      }
+    }
+
+    .hamburger {
+      width: 24px;
+      height: 10px;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        width: 24px;
+        height: 2px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        transition: all 0.3s;
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        top: 8px;
+      }
+    }
+
+    .menu-open & {
+      .hamburger {
+        &::before,
+        &::after {
+          background: #fff;
+        }
+
+        &::before {
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          top: 0;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .menu-container {
+    width: 0%;
+    height: 100%;
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    z-index: 800;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.99, 0.04, 0.87, 1) 0.3s;
+    background: $red;
+    opacity: 0;
+
+    .menu-open & {
+      width: 100%;
+      opacity: 1;
+    }
+
+    .menu {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 1;
+      list-style: none;
+      margin: 0;
+
+      @media (max-width: 667px) and (min-width: 320px) and (orientation: landscape) {
+        display: initial;
+
+        li {
+          display: inline-block;
+          margin: 0 16px;
+
+          &:nth-child(4) {
+            margin: 0;
+          }
+        }
+      }
+
+      li {
+        @include menu-opened;
+        @include menu-closed;
+        padding: 0;
+        flex: 1;
+
+        &:nth-child(4) {
+          p {
+            margin: 16px 0;
+          }
+
+          @media (max-width: 667px) and (min-width: 320px) and (orientation: landscape) {
+            p {
+              margin: 0;
+            }
+          }
+        }
+
+        &.menu-line {
+          width: 30px;
+          height: 1px;
+          background: #fff;
+          margin: 32px auto 16px;
+          padding: 0;
+          flex: initial;
+
+          @media (max-width: 667px) and (min-width: 320px) and (orientation: landscape) {
+            display: none;
+          }
+
+          @media (min-width: 667px) {
+            width: 1px;
+            height: 87px;
+          }
+        }
+
+        a {
+          display: block;
+          color: #fff;
+          font-size: 1.5rem;
+          transition: color 0.3s;
+          padding: 16px 0;
+          outline: 0;
+
+          &:hover {
+            color: #333;
+          }
+
+          @media (min-width: 1190px) {
+            font-size: 2rem;
+          }
+        }
+
+        p {
+          color: #fff;
+          font-size: 1rem;
+          margin-bottom: 0;
+
+          @media (min-width: 930px) {
+            font-size: 1.2rem;
+          }
+
+          @media (min-width: 1190px) {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    .menu-info {
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      bottom: 16px;
+      line-height: 1.6em;
+      left: 0;
+      color: #fff;
+      z-index: 1;
+      padding: 0 16px;
+      transform: translate(0, calc(100% + 16px));
+      transition: 0.3s 1s;
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 0;
+
+        @media (min-width: 930px) {
+          font-size: 1.4rem;
+        }
+
+        @media (min-width: 1190px) {
+          font-size: 1.7rem;
+        }
+      }
+
+      .menu-open & {
+        transform: translate(0, 0);
+      }
+    }
+  }
+}
+
+/* banner */
+html {
+  /* Give our document a fake height for demo purposes. */
+  height: 1500px;
+  /* We must set out root `font-size` to 0 to prevent our parallax margins being calculated */
+  font-size: 0;
+}
+
+body {
+  /* Reset the `font-size` to 16px/1em/100% */
+  font-size: 16px;
+}
+
+/* Fix our parallax elements in position */
+.parallax {
+  position: fixed;
+}
+
+/**
+ * Position our elements
+ *
+ * Firstly we set our element position using `top`, `right`, `bottom`, `left`, then set your parallax movement using `margin` and `rem`.
+ *
+ * In this demo our 'base factor' is 50 (see JavaScript). Our 'factor' calculation never exceeds this number (when the viewport is fully scrolled), which means our `rem` calculations are based on this number.
+ *
+ * Example:
+ *
+ * If I set my `top` to `200px` and want this element to shift up by `400px`, our `rem` value is 400/10, or `-40em` (using negative margins to shift upwards).
+ */
+h1 {
+  top: 75px;
+  margin-top: -3rem;
+  z-index: 5;
+}
+
+.box {
+  top: -1400px;
+  /* Positive margin, so it appears from above */
+  margin-top: 29rem;
+  /* Center and pad */
+  left: 50%;
+  margin-left: -27%;
+  padding: 2%;
+  width: 50%;
+}
+
+.btn {
+  top: 5em;
+  right: -800px;
+  margin-right: 18.5rem;
+}
+
+.skyline {
+  top: 240px;
+  margin-top: -28rem;
+  left: 8%;
+}
+
+.blimp {
+  top: 320px;
+  margin-top: -55rem;
+  left: 24%;
+}
+
+.gherkin {
+  top: 200px;
+  margin-top: -20rem;
+  left: 40%;
+  z-index: 10;
+}
+
+.bull {
+  top: 360px;
+  margin-top: -47rem;
+  left: 56%;
+}
+
+.dino {
+  top: 260px;
+  margin-top: -33rem;
+  left: 72%;
+}
+
+/**
+ * Demo aesthetics
+ */
+
+html {
+  background: #233c38 url("https://goo.gl/5wJBu") 50% 50%;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
 a:hover {
-  background: white;
-  color: black;
+  color: magenta;
 }
 
-.some-space {
-  animation: rotate 18s 0.5s infinite linear reverse;
+h1 {
+  width: 100%;
+  font: 3em/1 "Oswald", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
 }
 
-.some-more-space {
-  -webkit-animation: rotate 15s 0.1s infinite linear;
-  animation: rotate 15s 0.1s infinite linear;
+p {
+  margin: 0 0 1.5em;
 }
 
-@-webkit-keyframes rotate {
-  0% {
-    transform: rotateZ(0deg) translate3d(0, 1.5%, 0) rotateZ(0deg);
-  }
-  100% {
-    transform: rotateZ(360deg) translate3d(0, 1.5%, 0) rotateZ(-360deg);
-  }
+p:last-child {
+  margin-bottom: 0;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotateZ(0deg) translate3d(0, 1.5%, 0) rotateZ(0deg);
-  }
-  100% {
-    transform: rotateZ(360deg) translate3d(0, 1.5%, 0) rotateZ(-360deg);
-  }
+img {
+  width: 20%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
-/* end mouse parallax */
+
+code {
+  background-color: #222;
+  color: magenta;
+}
+
+.box {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: 0;
+}
+
+/*  */
