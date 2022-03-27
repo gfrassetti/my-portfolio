@@ -1,0 +1,25 @@
+{
+  "name": "my-portfolio",
+  "version": "0.0.1",
+  "description": "personal portfolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gfrassetti/my-portfolio.git"
+  },
+  "author": "Guido Frassetti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gfrassetti/my-portfolio/issues"
+  },
+  "homepage": "https://github.com/gfrassetti/my-portfolio#readme",
+  "devDependencies": {
+    "sass": "^1.49.9"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
