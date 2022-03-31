@@ -1,13 +1,19 @@
 // $('.hamburger-menu, .link').click(function () {
 //  $('body').hasClass('menu-open') ? ($('body').removeClass('menu-open')) : ($('body').addClass('menu-open'));
 // });
-
+const nav = document.querySelector(".nav");
 //However, don't forget to include jQuery for it to work.
 
 function toggleMenu() {
   var body = document.body;
   body.className.match(/(?:^|\s)menu-open(?!\S)/)
-    ? (body.className = body.className.replace(/(?:^|\s)menu-open(?!\S)/g, ""))
+    ? (body.className = body.className.replace(
+        /(?:^|\s)menu-open(?!\S)/g,
+        "",
+        (nav.className = "nav"),
+        $("#span3").css("top", "30px"),
+        $("#span1").css("margin-top", "7px")
+      ))
     : (body.className += "menu-open");
 }
 
@@ -27,23 +33,58 @@ var viewport = $(window),
   root = $("html"),
   maxScroll;
 
-// Bind events to window
-viewport
-  .on({
-    scroll: function () {
-      // Grab scroll position
-      var scrolled = viewport.scrollTop();
+function openMenu() {
+  //Hamburger btn
 
-      /**
-       * Calculate our factor, setting it as the root `font-size`.
-       *
-       * Our factor is calculated by multiplying the ratio of the page scrolled by our base factor. The higher the base factor, the larger the parallax effect.
-       */
-      root.css({ fontSize: (scrolled / maxScroll) * 50 });
-    },
-    resize: function () {
-      // Calculate the maximum scroll position
-      maxScroll = root.height() - viewport.height();
-    },
-  })
-  .trigger("resize");
+  nav.addEventListener("click", (event) => {
+    nav.classList.toggle("open");
+    if ($(".nav").hasClass("open")) {
+      $("#span1").css("margin-top", "0px");
+      $("#span3").css("top", "37px");
+    } else {
+      $("#span3").css("top", "30px");
+      $("#span1").css("margin-top", "7px");
+    }
+  });
+}
+
+openMenu();
+
+/* codepen */
+document.querySelectorAll(".scene").forEach((elem) => {
+  const modifier = elem.getAttribute("data-modifier");
+
+  basicScroll
+    .create({
+      elem: elem,
+      from: 0,
+      to: 519,
+      direct: true,
+      props: {
+        "--translateY": {
+          from: "0",
+          to: `${10 * modifier}px`,
+        },
+      },
+    })
+    .start();
+});
+
+/* darker banner */
+
+$(window).scroll(function () {
+  /*   $(".banner").css("opacity", 1 - $(window).scrollTop() / 950); */
+  if ($(window).scrollTop() > 1000) {
+    $("#head").addClass("navbar-fixed-top");
+    $(".logo").addClass("logo-sticky");
+  } else {
+    $("#head").removeClass("navbar-fixed-top");
+    $(".logo").removeClass("logo-sticky");
+  }
+  if (!$(".logo").hasClass("logo-sticky")) {
+    $(".logo").height("12%");
+  } else {
+    $(".logo").height("7%");
+  }
+});
+/*  */
