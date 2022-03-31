@@ -18,6 +18,7 @@ function toggleMenu() {
 }
 
 window.onload = function () {
+  parallax();
   var hamburger = document.getElementsByClassName("hamburger-menu")[0];
   var menuLinks = document.getElementsByClassName("link");
 
@@ -50,25 +51,27 @@ function openMenu() {
 
 openMenu();
 
-/* codepen */
-document.querySelectorAll(".scene").forEach((elem) => {
-  const modifier = elem.getAttribute("data-modifier");
+function parallax() {
+  /* codepen */
+  document.querySelectorAll(".scene").forEach((elem) => {
+    const modifier = elem.getAttribute("data-modifier");
 
-  basicScroll
-    .create({
-      elem: elem,
-      from: 0,
-      to: 519,
-      direct: true,
-      props: {
-        "--translateY": {
-          from: "0",
-          to: `${10 * modifier}px`,
+    basicScroll
+      .create({
+        elem: elem,
+        from: 0,
+        to: 519,
+        direct: true,
+        props: {
+          "--translateY": {
+            from: "0",
+            to: `${10 * modifier}px`,
+          },
         },
-      },
-    })
-    .start();
-});
+      })
+      .start();
+  });
+}
 
 /* darker banner */
 
