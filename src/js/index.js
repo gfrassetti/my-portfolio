@@ -77,7 +77,7 @@ function parallax() {
 
 $(window).scroll(function () {
   /*   $(".banner").css("opacity", 1 - $(window).scrollTop() / 950); */
-  if ($(window).scrollTop() > 1000) {
+  if ($(window).scrollTop() > 700) {
     $("#head").addClass("navbar-fixed-top");
     $(".logo").addClass("logo-sticky");
   } else {
@@ -85,7 +85,7 @@ $(window).scroll(function () {
     $(".logo").removeClass("logo-sticky");
   }
   if (!$(".logo").hasClass("logo-sticky")) {
-    $(".logo").height("12%");
+    $(".logo").height("9%");
   } else {
     $(".logo").height("7%");
   }
@@ -95,4 +95,16 @@ $(window).scroll(function () {
     $(".logo-sticky").css("position", "sticky");
   }
 });
+/*  */
+
+var path = document.querySelector("#separator");
+var length = path.getTotalLength();
+
+document.write(
+  "<style>svg line#separator { stroke-dasharray:" +
+    length +
+    "; stroke-dashoffset:" +
+    length +
+    ";</style>"
+);
 /*  */

@@ -3,6 +3,7 @@
 
 @import "./components/body";
 @import "./components/header";
+@import "./components/footer";
 
 * {
   margin: 0;
@@ -14,10 +15,14 @@ html {
   scroll-behavior: smooth;
 }
 
-p{
+p {
   color: white;
 }
 
-h3{
+h3 {
   color: white;
+}
+
+ul {
+  padding: 0;
 }
