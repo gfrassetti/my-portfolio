@@ -233,7 +233,7 @@ a {
 }
 @media only screen and (max-width: 588px) {
   .svg {
-    margin-top: -10%;
+    margin-top: -16%;
   }
 }
 
@@ -779,7 +779,7 @@ header {
   padding: 1rem;
 }
 .logo p {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 @media only screen and (max-width: 680px) {
   .logo p {
@@ -1259,7 +1259,7 @@ a {
 }
 @media only screen and (max-width: 588px) {
   .svg {
-    margin-top: -10%;
+    margin-top: -16%;
   }
 }
 
@@ -1805,20 +1805,33 @@ svg line#separator {
 }
 
 #github-a {
-  width: 25%;
-  margin: 0;
-  margin-left: 50%;
+  margin: 0 auto;
 }
 
 #github {
-  width: 5%;
-  height: 5%;
+  width: 100%;
+  background: #00adb5;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #00adb5, #222831);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #00adb5, #222831);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 0 auto;
+  padding: 0.5%;
+}
+@media only screen and (max-width: 380px) {
+  #github {
+    width: 6%;
+  }
 }
 
 footer {
+  padding-top: 4%;
+  text-align: center;
   height: 200px;
-  background-color: #222831;
+  background-color: #022c43;
   z-index: 999;
+  height: auto;
 }
 
 /* Triangles */
@@ -1828,12 +1841,79 @@ svg#triangle-1 {
 
 .tri-1-wrap {
   background: #222831;
+  padding-bottom: 5%;
 }
 
 #triangle-1 path {
   fill: #022c43;
   stroke: #022c43;
   stroke-width: 2;
+}
+
+.form-container {
+  text-align: center;
+  padding: 1rem 25rem;
+}
+@media only screen and (max-width: 600px) {
+  .form-container {
+    padding: 1rem 5rem;
+  }
+}
+
+.form-contact {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: inherit;
+  outline: none;
+}
+form input,
+form textarea {
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: #222831;
+}
+
+input[type=email],
+input[type=email]:not(output):not(:focus),
+input[type=text],
+input[type=text]:not(output):not(:focus),
+textarea {
+  border-bottom: 1px solid #fafafa;
+  background: transparent;
+  color: #fafafa;
+  font-size: 1.8rem;
+  box-shadow: none;
+  outline: none;
+  background-color: #222831;
+}
+
+#submit-form {
+  color: white;
+  z-index: 1000;
+  height: 40px;
+  width: 40px;
+  left: 70%;
+}
+
+.contact-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+lottie-player {
+  width: 1.5%;
 }
 
 * {

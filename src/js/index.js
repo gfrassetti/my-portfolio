@@ -94,17 +94,11 @@ $(window).scroll(function () {
   } else {
     $(".logo-sticky").css("position", "sticky");
   }
+  /*   if ($(window).scrollTop() > 1150) {
+    $(".logo-sticky").css("border-bottom", "1px solid #00adb5");
+  } else {
+    $(".logo-sticky").css("border-bottom", "none");
+  } */
 });
-/*  */
 
-var path = document.querySelector("#separator");
-var length = path.getTotalLength();
-
-document.write(
-  "<style>svg line#separator { stroke-dasharray:" +
-    length +
-    "; stroke-dashoffset:" +
-    length +
-    ";</style>"
-);
 /*  */
