@@ -89,5 +89,10 @@ $(window).scroll(function () {
   } else {
     $(".logo").height("7%");
   }
+  if ($(window).scrollTop() > 1500) {
+    $(".logo-sticky").css("position", "fixed");
+  } else {
+    $(".logo-sticky").css("position", "sticky");
+  }
 });
 /*  */
