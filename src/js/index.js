@@ -1,8 +1,4 @@
-// $('.hamburger-menu, .link').click(function () {
-//  $('body').hasClass('menu-open') ? ($('body').removeClass('menu-open')) : ($('body').addClass('menu-open'));
-// });
 const nav = document.querySelector(".nav");
-//However, don't forget to include jQuery for it to work.
 
 function toggleMenu() {
   var body = document.body;
@@ -76,7 +72,6 @@ function parallax() {
 /* darker banner */
 
 $(window).scroll(function () {
-  /*   $(".banner").css("opacity", 1 - $(window).scrollTop() / 950); */
   if ($(window).scrollTop() > 700) {
     $("#head").addClass("navbar-fixed-top");
     $(".logo").addClass("logo-sticky");
@@ -94,11 +89,9 @@ $(window).scroll(function () {
   } else {
     $(".logo-sticky").css("position", "sticky");
   }
-  /*   if ($(window).scrollTop() > 1150) {
-    $(".logo-sticky").css("border-bottom", "1px solid #00adb5");
+  /*   if ($(window).scrollTop() >= 1100) {
+    $(".line-separator").css("display", "inline");
   } else {
-    $(".logo-sticky").css("border-bottom", "none");
+    $(".line-separator").css("display", "none");
   } */
 });
-
-/*  */

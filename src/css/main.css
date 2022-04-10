@@ -775,7 +775,7 @@ header {
   height: 12%;
   transition: opacity 0.3s;
   color: white;
-  background-color: #222831;
+  background-color: #252525;
   padding: 1rem;
 }
 .logo p {
@@ -1026,7 +1026,6 @@ header {
   width: 100%;
 }
 
-/* end side menu */
 @font-face {
   font-family: Cyber;
   src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
@@ -1812,9 +1811,9 @@ svg line#separator {
   width: 100%;
   background: #00adb5;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #00adb5, #222831);
+  background: -webkit-linear-gradient(to left, #252525, #222831);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #00adb5, #222831);
+  background: linear-gradient(to right, #252525, #222831);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   margin: 0 auto;
   padding: 0.5%;
@@ -1852,7 +1851,7 @@ svg#triangle-1 {
 
 .form-container {
   text-align: center;
-  padding: 1rem 25rem;
+  padding: 3rem 25rem;
 }
 @media only screen and (max-width: 600px) {
   .form-container {
@@ -1874,6 +1873,7 @@ form {
   justify-content: center;
   align-items: inherit;
   outline: none;
+  background-color: transparent;
 }
 form input,
 form textarea {
@@ -1882,7 +1882,7 @@ form textarea {
   outline: none;
   border: none;
   color: white;
-  background-color: #222831;
+  background-color: #252525;
 }
 
 input[type=email],
@@ -1896,7 +1896,7 @@ textarea {
   font-size: 1.8rem;
   box-shadow: none;
   outline: none;
-  background-color: #222831;
+  background-color: #252525;
 }
 
 #submit-form {
@@ -1914,6 +1914,19 @@ textarea {
 
 lottie-player {
   width: 1.5%;
+}
+@media only screen and (max-width: 414px) {
+  lottie-player {
+    width: 5.5%;
+  }
+}
+lottie-player svg {
+  background-color: white;
+}
+
+#clouds {
+  height: 135px;
+  width: 100%;
 }
 
 * {

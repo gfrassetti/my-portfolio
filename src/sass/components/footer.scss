@@ -25,12 +25,12 @@ svg line#separator {
   background: $color2; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to left,
-    $color2,
+    #252525,
     $color1
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    $color2,
+    #252525,
     $color1
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
@@ -68,7 +68,7 @@ svg#triangle-1 {
 
 .form-container {
   text-align: center;
-  padding: 1rem 25rem;
+  padding: 3rem 25rem;
   @media only screen and (max-width: 600px) {
     padding: 1rem 5rem;
   }
@@ -88,6 +88,7 @@ form {
   justify-content: center;
   align-items: inherit;
   outline: none;
+  background-color: transparent;
 
   input,
   textarea {
@@ -96,7 +97,7 @@ form {
     outline: none;
     border: none;
     color: white;
-    background-color: $color1;
+    background-color: #252525;
   }
 }
 
@@ -111,7 +112,7 @@ textarea {
   font-size: 1.8rem;
   box-shadow: none;
   outline: none;
-  background-color: $color1;
+  background-color: #252525;
 }
 
 #submit-form {
@@ -126,6 +127,18 @@ textarea {
   font-size: 2rem;
   font-weight: bold;
 }
+
 lottie-player {
   width: 1.5%;
+  @media only screen and (max-width: 414px) {
+    width: 5.5%;
+  }
+  svg {
+    background-color: white;
+  }
+}
+
+#clouds {
+  height: 135px;
+  width: 100%;
 }
