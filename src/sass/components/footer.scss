@@ -67,10 +67,15 @@ svg#triangle-1 {
 }
 
 .form-container {
+  width: 40%;
+  margin: 0;
   text-align: center;
-  padding: 3rem 25rem;
+  padding: 3rem 0;
   @media only screen and (max-width: 600px) {
     padding: 1rem 5rem;
+  }
+  @media screen and (max-width: 414px) {
+    width: 100%;
   }
 }
 
@@ -99,6 +104,10 @@ form {
     color: white;
     background-color: #252525;
   }
+  span {
+    color: white;
+    font-size: 0.9rem;
+  }
 }
 
 input[type="email"],
@@ -120,7 +129,7 @@ textarea {
   z-index: 1000;
   height: 40px;
   width: 40px;
-  left: 70%;
+  left: 38%;
 }
 
 .contact-title {
@@ -141,4 +150,19 @@ lottie-player {
 #clouds {
   height: 135px;
   width: 100%;
+}
+
+.fa-envelope,
+.fa-location-dot,
+.fa-linkedin {
+  color: white;
+}
+
+.contact-section {
+  justify-content: space-evenly;
+  display: flex;
+  align-items: baseline;
+  @media screen and (max-width: 414px) {
+    display: block;
+  }
 }
