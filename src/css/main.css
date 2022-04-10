@@ -1799,7 +1799,7 @@ svg line#separator {
     stroke-dashoffset: 0;
   }
 }
-#github :hover {
+#github a :hover {
   transform: scale(1.1);
 }
 
