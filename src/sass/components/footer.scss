@@ -36,8 +36,9 @@ svg line#separator {
 
   margin: 0 auto;
   padding: 0.5%;
+
   @media only screen and (max-width: 380px) {
-    width: 6%;
+    width: 100%;
   }
 }
 
@@ -72,7 +73,8 @@ svg#triangle-1 {
   text-align: center;
   padding: 3rem 0;
   @media only screen and (max-width: 600px) {
-    padding: 1rem 5rem;
+    padding: 1rem;
+    width: 100%;
   }
   @media screen and (max-width: 414px) {
     width: 100%;
@@ -130,6 +132,9 @@ textarea {
   height: 40px;
   width: 40px;
   left: 38%;
+  @media only screen and (max-width: 600px) {
+    left: 30%;
+  }
 }
 
 .contact-title {
@@ -138,8 +143,8 @@ textarea {
 }
 
 lottie-player {
-  width: 1.5%;
-  @media only screen and (max-width: 414px) {
+  width: 2.5%;
+  @media only screen and (max-width: 600px) {
     width: 5.5%;
   }
   svg {
@@ -163,6 +168,9 @@ lottie-player {
   display: flex;
   align-items: baseline;
   @media screen and (max-width: 414px) {
+    display: block;
+  }
+  @media only screen and (max-width: 600px) {
     display: block;
   }
 }

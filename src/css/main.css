@@ -334,7 +334,7 @@ a {
   display: block;
   position: absolute;
   left: 0;
-  bottom: -53px;
+  bottom: -55px;
   width: 100%;
   height: auto;
   z-index: 3;
@@ -1397,7 +1397,7 @@ a {
   display: block;
   position: absolute;
   left: 0;
-  bottom: -53px;
+  bottom: -55px;
   width: 100%;
   height: auto;
   z-index: 3;
@@ -1896,7 +1896,7 @@ svg line#separator {
 }
 @media only screen and (max-width: 380px) {
   #github {
-    width: 6%;
+    width: 100%;
   }
 }
 
@@ -1933,7 +1933,8 @@ svg#triangle-1 {
 }
 @media only screen and (max-width: 600px) {
   .form-container {
-    padding: 1rem 5rem;
+    padding: 1rem;
+    width: 100%;
   }
 }
 @media screen and (max-width: 414px) {
@@ -1993,6 +1994,11 @@ textarea {
   width: 40px;
   left: 38%;
 }
+@media only screen and (max-width: 600px) {
+  #submit-form {
+    left: 30%;
+  }
+}
 
 .contact-title {
   font-size: 2rem;
@@ -2000,9 +2006,9 @@ textarea {
 }
 
 lottie-player {
-  width: 1.5%;
+  width: 2.5%;
 }
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 600px) {
   lottie-player {
     width: 5.5%;
   }
@@ -2028,6 +2034,11 @@ lottie-player svg {
   align-items: baseline;
 }
 @media screen and (max-width: 414px) {
+  .contact-section {
+    display: block;
+  }
+}
+@media only screen and (max-width: 600px) {
   .contact-section {
     display: block;
   }
