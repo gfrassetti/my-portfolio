@@ -353,7 +353,7 @@ svg.bottom {
 
 .separator {
   background: #00adb5;
-  width: 150px;
+  width: 30%;
   height: 2px;
   margin: 1rem 0;
   padding: 0;
@@ -761,7 +761,45 @@ svg.bottom {
   --primary-hue: 260;
 }
 
+.skills {
+  text-align: center;
+  background-color: #eef2ff;
+}
+.skills div:not(.last) {
+  margin-bottom: 1%;
+}
+.skills div:not(.last) .skill {
+  width: 100%;
+}
+.skills div:not(.last) .skill img {
+  width: 15%;
+  cursor: pointer;
+}
+
+.skill-title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.container-fluid {
+  margin-bottom: 0 !important;
+}
+
 /* end cyber butns */
+#bigTriangleShadow {
+  background-color: #eef2ff;
+}
+
+#trianglePath2 {
+  fill: #012336;
+  stroke: #022c43;
+}
+
+#trianglePath1 {
+  fill: #022c43;
+  stroke: #022c43;
+}
+
 /*  */
 header {
   width: 100%;
@@ -1378,7 +1416,7 @@ svg.bottom {
 
 .separator {
   background: #00adb5;
-  width: 150px;
+  width: 30%;
   height: 2px;
   margin: 1rem 0;
   padding: 0;
@@ -1786,7 +1824,45 @@ svg.bottom {
   --primary-hue: 260;
 }
 
+.skills {
+  text-align: center;
+  background-color: #eef2ff;
+}
+.skills div:not(.last) {
+  margin-bottom: 1%;
+}
+.skills div:not(.last) .skill {
+  width: 100%;
+}
+.skills div:not(.last) .skill img {
+  width: 15%;
+  cursor: pointer;
+}
+
+.skill-title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.container-fluid {
+  margin-bottom: 0 !important;
+}
+
 /* end cyber butns */
+#bigTriangleShadow {
+  background-color: #eef2ff;
+}
+
+#trianglePath2 {
+  fill: #012336;
+  stroke: #022c43;
+}
+
+#trianglePath1 {
+  fill: #022c43;
+  stroke: #022c43;
+}
+
 svg line#separator {
   animation: dash 3s linear forwards;
 }
@@ -1844,7 +1920,7 @@ svg#triangle-1 {
 }
 
 #triangle-1 path {
-  fill: #022c43;
+  fill: #eef2ff;
   stroke: #022c43;
   stroke-width: 2;
 }

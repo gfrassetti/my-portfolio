@@ -360,7 +360,7 @@ svg {
 
 .separator {
   background: $color2;
-  width: 150px;
+  width: 30%;
   height: 2px;
   margin: 1rem 0;
   padding: 0;
@@ -758,4 +758,41 @@ svg {
   --primary-hue: 260;
 }
 
+.skills {
+  div:not(.last) {
+    margin-bottom: 1%;
+    .skill {
+      width: 100%;
+      img {
+        width: 15%;
+        cursor: pointer;
+      }
+    }
+  }
+  text-align: center;
+  background-color: #eef2ff;
+}
+
+.skill-title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.container-fluid {
+  margin-bottom: 0 !important;
+}
+
 /* end cyber butns */
+#bigTriangleShadow {
+  background-color: #eef2ff;
+}
+
+#trianglePath2 {
+  fill: #012336;
+  stroke: #022c43;
+}
+
+#trianglePath1 {
+  fill: #022c43;
+  stroke: #022c43;
+}
