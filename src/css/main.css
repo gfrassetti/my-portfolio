@@ -762,6 +762,8 @@ svg.bottom {
 }
 
 .skills {
+  padding: 3% 0;
+  height: 100%;
   text-align: center;
   background-color: #eef2ff;
 }
@@ -777,8 +779,9 @@ svg.bottom {
 }
 
 .skill-title {
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 2rem;
+  color: black;
 }
 
 .container-fluid {
@@ -798,6 +801,11 @@ svg.bottom {
 #trianglePath1 {
   fill: #022c43;
   stroke: #022c43;
+}
+
+.drops {
+  background-color: #022c43;
+  height: auto;
 }
 
 /*  */
@@ -1825,6 +1833,8 @@ svg.bottom {
 }
 
 .skills {
+  padding: 3% 0;
+  height: 100%;
   text-align: center;
   background-color: #eef2ff;
 }
@@ -1840,8 +1850,9 @@ svg.bottom {
 }
 
 .skill-title {
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 2rem;
+  color: black;
 }
 
 .container-fluid {
@@ -1861,6 +1872,11 @@ svg.bottom {
 #trianglePath1 {
   fill: #022c43;
   stroke: #022c43;
+}
+
+.drops {
+  background-color: #022c43;
+  height: auto;
 }
 
 svg line#separator {
