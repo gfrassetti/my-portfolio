@@ -793,8 +793,11 @@ h1 {
 
 .skill-title {
   font-weight: bolder;
-  font-size: 2rem;
+  font-size: 3rem;
   color: black;
+  @media screen and (max-width: 419px) {
+    font-size: 2rem;
+  }
 }
 
 .container-fluid {
