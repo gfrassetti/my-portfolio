@@ -21,7 +21,7 @@ svg line#separator {
 }
 
 #github {
-  width: 70%;
+  width: 100%;
   background: $color2; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to left,
@@ -146,6 +146,9 @@ lottie-player {
   width: 2.5%;
   @media only screen and (max-width: 600px) {
     width: 5.5%;
+  }
+  @media only screen and (min-width: 600px) {
+    width: 1.8%;
   }
   svg {
     background-color: white;

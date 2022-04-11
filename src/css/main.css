@@ -1920,7 +1920,7 @@ svg line#separator {
 }
 
 #github {
-  width: 70%;
+  width: 100%;
   background: #00adb5;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #252525, #222831);
@@ -2047,6 +2047,11 @@ lottie-player {
 @media only screen and (max-width: 600px) {
   lottie-player {
     width: 5.5%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  lottie-player {
+    width: 1.8%;
   }
 }
 lottie-player svg {
