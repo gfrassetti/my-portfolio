@@ -332,11 +332,9 @@ a {
 
 .section-divider {
   display: block;
-  position: absolute;
-  left: 0;
-  bottom: -55px;
+  position: relative;
+  top: 14px;
   width: 100%;
-  height: initial;
   z-index: 999;
 }
 .section-divider path {
@@ -1406,11 +1404,9 @@ a {
 
 .section-divider {
   display: block;
-  position: absolute;
-  left: 0;
-  bottom: -55px;
+  position: relative;
+  top: 14px;
   width: 100%;
-  height: initial;
   z-index: 999;
 }
 .section-divider path {
