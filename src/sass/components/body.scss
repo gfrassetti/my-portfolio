@@ -265,6 +265,7 @@ a {
 }
 
 .works {
+  overflow: hidden;
   @media only screen and (max-width: 680px) {
     text-align: center;
   }
@@ -367,7 +368,14 @@ svg {
   padding: 0;
 }
 
+h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
 .whoIs {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -375,6 +383,7 @@ svg {
   margin: 0 10%;
   margin-bottom: 3%;
   margin-top: 1%;
+
   h2,
   h3 {
     @media only screen and (max-width: 768px) {
@@ -453,6 +462,9 @@ svg {
     margin-bottom: 3%;
     font-size: 2rem;
     font-weight: bold;
+    @media only screen and (max-width: 420px) {
+      margin-bottom: 17%;
+    }
   }
 }
 

@@ -261,6 +261,9 @@ a {
   position: absolute;
 }
 
+.works {
+  overflow: hidden;
+}
 @media only screen and (max-width: 680px) {
   .works {
     text-align: center;
@@ -360,7 +363,14 @@ svg.bottom {
   padding: 0;
 }
 
+h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
 .whoIs {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -458,6 +468,11 @@ svg.bottom {
   margin-bottom: 3%;
   font-size: 2rem;
   font-weight: bold;
+}
+@media only screen and (max-width: 420px) {
+  .whoAmI h3 {
+    margin-bottom: 17%;
+  }
 }
 
 .about-me-container {
@@ -1342,6 +1357,9 @@ a {
   position: absolute;
 }
 
+.works {
+  overflow: hidden;
+}
 @media only screen and (max-width: 680px) {
   .works {
     text-align: center;
@@ -1441,7 +1459,14 @@ svg.bottom {
   padding: 0;
 }
 
+h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
 .whoIs {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1539,6 +1564,11 @@ svg.bottom {
   margin-bottom: 3%;
   font-size: 2rem;
   font-weight: bold;
+}
+@media only screen and (max-width: 420px) {
+  .whoAmI h3 {
+    margin-bottom: 17%;
+  }
 }
 
 .about-me-container {
@@ -2041,6 +2071,10 @@ textarea {
   font-weight: bold;
 }
 
+.contact-info {
+  overflow: hidden;
+}
+
 lottie-player {
   width: 2.5%;
 }
@@ -2070,6 +2104,7 @@ lottie-player svg {
 }
 
 .contact-section {
+  overflow: hidden;
   justify-content: space-evenly;
   display: flex;
   align-items: baseline;

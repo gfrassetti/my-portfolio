@@ -56,6 +56,7 @@
     ></script>
     <!--AOS-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./src/css/main.css" />
     <title>Guido Frassetti | Portfolio</title>
   </head>
   <body>
@@ -146,7 +147,7 @@
     <main class="main">
       <section class="about" id="about">
         <div class="logo">
-          <p>guido<strong>frassetti</strong></p>
+          <p data-aos="zoom-in">guido<strong>frassetti</strong></p>
         </div>
         <div class="svg">
           <svg class="bottom" viewbox="0 0 100 100" preserveaspectratio="none">
@@ -158,15 +159,15 @@
           </svg>
         </div>
         <div class="whoIs">
-          <h2>Quien Es?</h2>
+          <h1 data-aos="zoom-in">Quien Es?</h1>
           <p class="separator"></p>
           <div class="whoIs">
-            <h3 style="font-size: 1.5rem">Me llamo Guido</h3>
-            <p>
+            <h2 style="font-size: 1.5rem" data-aos="zoom-in">Me llamo Guido</h2>
+            <p data-aos="fade-right">
               Armo cosas con HTML, las dejo lindas con CSS y las rompo con JS.
             </p>
             <br />
-            <p>
+            <p data-aos="fade-left">
               Soy un desarrollador web, actualmente estudiando Full Stack en
               Coderhouse. Vivo en Buenos Aires - Argentina. Mis comienzos en el
               mundo de la programacion comienzan en octubre del 2020, estudiando
@@ -175,13 +176,13 @@
               aprender cosas nuevas, dentro mas mejor.
             </p>
           </div>
-          <h3>Que es lo que hace?</h3>
+          <h3 data-aos="zoom-in">Que es lo que hace?</h3>
           <p class="separator"></p>
           <br />
           <div class="whoAmI">
             <div class="about-me-container">
-              <h3>Soy Programador</h3>
-              <p>
+              <h3 data-aos="fade-right">Soy Programador</h3>
+              <p data-aos="fade-up">
                 Por la parte del Front-end suelo trabajar con Javascript, como
                 asi tambien con algunas librerias o frameworks como React js.
                 Tambien hago cosas muy lindas con Sass, CSS, y cuando se
@@ -192,8 +193,10 @@
               </p>
             </div>
             <div class="about-me-container">
-              <h3>Tambien un apasionado de la fotografia</h3>
-              <p>
+              <h3 data-aos="fade-left">
+                Tambien un apasionado de la fotografia
+              </h3>
+              <p data-aos="fade-up">
                 Asi es, la fotografia es uno de mis grandes hobbies, la imagen
                 que se aprecia en portada fue tomada por mi, en mi viaje por el
                 sur Argentino y editada con Adobe PS y Lightroom. Pueden ver mi
@@ -227,11 +230,11 @@
         <div
           class="d-flex justify-content-center flex-column align-items-center"
         >
-          <h3 class="skill-title">Skills</h3>
+          <h3 data-aos="fade-up" class="skill-title">Skills</h3>
           <p class="separator"></p>
         </div>
         <div class="container-fluid">
-          <div class="row">
+          <div class="row" data-aos="zoom-in">
             <div class="col skill">
               <img
                 src="./src/images/skills icons/006-c-sharp.svg"
@@ -248,7 +251,7 @@
               />
             </div>
           </div>
-          <div class="row">
+          <div class="row" data-aos="zoom-in">
             <div class="col skill">
               <img
                 src="./src/images/skills icons/icons8-django.svg"
@@ -265,7 +268,7 @@
               <img src="./src/images/skills icons/009-css.svg" alt="css3" />
             </div>
           </div>
-          <div class="row">
+          <div class="row" data-aos="zoom-in">
             <div class="col skill">
               <img
                 src="./src/images/skills icons/008-js.svg"
@@ -279,7 +282,7 @@
               <img src="/src/images/skills icons/react-2.svg" alt="react" />
             </div>
           </div>
-          <div class="row last">
+          <div class="row last" data-aos="zoom-in">
             <div class="col skill">
               <img src="/src/images/skills icons/004-html.png" alt="html5" />
             </div>
@@ -344,9 +347,9 @@
       <section class="works" id="works">
         <div class="tri-1-wrap"></div>
         <div class="whoIs">
-          <h3>Mis Trabajos</h3>
+          <h3 data-aos="zoom-in">Mis Trabajos</h3>
           <p class="separator"></p>
-          <p>
+          <p data-aos="zoom-in-up">
             Aqui se encuentran algunos de mis proyectos en los que he trabajado
             ultimamente. Todos ellos fueron hechos durante mis estudios estos
             ultimos años.
@@ -359,7 +362,12 @@
             target="_blank"
             class="project-link"
           >
-            <img src="./src/images/pokedex.png" alt="" class="project-img" />
+            <img
+              src="./src/images/pokedex.png"
+              alt=""
+              class="project-img"
+              data-aos="zoom-in"
+            />
           </a>
           <div class="work-description">
             <div>
@@ -368,10 +376,12 @@
                 <i class="fab fa-css3-alt"></i>
                 <i class="fa-brands fa-bootstrap"></i>
               </p>
-              <h4>Pokedex</h4>
+              <h4 data-aos="zoom-in">Pokedex</h4>
             </div>
-            <h5>Built with Boostrap, vanilla JS, and CSS3</h5>
-            <p>
+            <h5 data-aos="fade-right">
+              Built with Boostrap, vanilla JS, and CSS3
+            </h5>
+            <p data-aos="fade-left">
               En este sitio uso la pokeAPI para obtener todos los pokemon, en la
               misma se puede buscar por pokemon o id. Se pueden seleccionar y
               ver en detalle.
@@ -409,6 +419,7 @@
               src="./src/images/kioskodeplantas.png"
               alt=""
               class="project-img"
+              data-aos="zoom-in"
             />
           </a>
           <div>
@@ -418,10 +429,12 @@
                 <i class="fab fa-css3-alt"></i>
                 <i class="fa-brands fa-bootstrap"></i>
               </p>
-              <h4>Kiosko de plantas</h4>
+              <h4 data-aos="zoom-in">Kiosko de plantas</h4>
             </div>
-            <h5>Built with Boostrap, vanilla JS, Jquery, and SASS</h5>
-            <p>
+            <h5 data-aos="fade-right">
+              Built with Boostrap, vanilla JS, Jquery, and SASS
+            </h5>
+            <p data-aos="fade-left">
               Kiosko de plantas empezo como un projecto de cursada, la cual se
               convirtio en la pagina para un negocio. Consiste en una landing
               page, con tienda y carrito de compras
@@ -460,6 +473,7 @@
               alt=""
               class="project-img"
               target="_blank"
+              data-aos="zoom-in"
             />
           </a>
           <div>
@@ -468,10 +482,10 @@
                 <i class="fab fa-js-square"></i>
                 <i class="fa-brands fa-sass"></i>
               </p>
-              <h4>Memotest DBZ</h4>
+              <h4 data-aos="zoom-in">Memotest DBZ</h4>
             </div>
-            <h5>Built with Boostrap, vanilla JS</h5>
-            <p>Un juego memotest realizado con puro JS.</p>
+            <h5 data-aos="fade-right">Built with Boostrap, vanilla JS</h5>
+            <p data-aos="fade-left">Un juego memotest realizado con puro JS.</p>
             <div class="buttons">
               <a href="https://gfrassetti.github.io/memotest/" target="_blank"
                 ><button class="cybr-btn">
@@ -501,7 +515,12 @@
             class="project-link"
             target="_blank"
           >
-            <img src="./src/images/simondice.png" alt="" class="project-img" />
+            <img
+              src="./src/images/simondice.png"
+              alt=""
+              class="project-img"
+              data-aos="zoom-in"
+            />
           </a>
           <div>
             <div>
@@ -509,10 +528,12 @@
                 <i class="fab fa-js-square"></i>
                 <i class="fa-brands fa-sass"></i>
               </p>
-              <h4>Simon Says</h4>
+              <h4 data-aos="zoom-in">Simon Says</h4>
             </div>
-            <h5>Built with Boostrap, vanilla JS</h5>
-            <p>Un juego simon dice realizado con puro JS.</p>
+            <h5 data-aos="fade-right">Built with Boostrap, vanilla JS</h5>
+            <p data-aos="fade-left">
+              Un juego simon dice realizado con puro JS.
+            </p>
             <div class="buttons">
               <a
                 href="https://github.com/gfrassetti/juego-simon-dice"
@@ -578,12 +599,12 @@
       </svg>
       <footer id="contact">
         <div class="form-contact">
-          <h3 class="contact-title">Queres contacterme?</h3>
+          <h3 class="contact-title" data-aos="zoom-in">Queres contacterme?</h3>
           <p class="separator"></p>
-          <p>Please, use the form below or send an email:</p>
+          <p data-aos="zoom-in">Please, use the form below or send an email:</p>
         </div>
         <section class="contact-section">
-          <div class="form-container container">
+          <div class="form-container container" data-aos="fade-up">
             <form method="POST" action="https://formspree.io/f/moqrkvwl">
               <input type="text" placeholder="Nombre" id="name" required />
               <input
@@ -602,14 +623,21 @@
                 type="text"
                 placeholder="Mensaje"
               ></textarea>
-              <button class="cybr-btn" type="submit" id="submit-form">
+              <button
+                class="cybr-btn"
+                type="submit"
+                id="submit-form"
+                data-aos="fade-up"
+              >
                 <span aria-hidden>Enviar</span>
                 <span aria-hidden class="cybr-btn__glitch"
                   >Guido Frassetti</span
                 >
                 <span aria-hidden class="cybr-btn__tag">R25</span>
               </button>
-              <span>This site is protected by reCAPTCHA</span>
+              <span data-aos="fade-right"
+                >This site is protected by reCAPTCHA</span
+              >
             </form>
           </div>
           <div class="contact-info">
@@ -644,6 +672,7 @@
       </footer>
     </main>
     <!-- scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./src/js/jquery-3.6.0.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"
@@ -651,5 +680,12 @@
     ></script>
     <script src="https://s.electerious.com/basicScroll/dist/basicScroll.min.js"></script>
     <script src="./src/js/index.js"></script>
+    <script>
+      AOS.init({
+        offset: 100,
+        duration: 1000,
+        once: true,
+      });
+    </script>
   </body>
 </html>

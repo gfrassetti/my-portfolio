@@ -142,6 +142,10 @@ textarea {
   font-weight: bold;
 }
 
+.contact-info {
+  overflow: hidden;
+}
+
 lottie-player {
   width: 2.5%;
   @media only screen and (max-width: 600px) {
@@ -167,6 +171,7 @@ lottie-player {
 }
 
 .contact-section {
+  overflow: hidden;
   justify-content: space-evenly;
   display: flex;
   align-items: baseline;
