@@ -769,6 +769,9 @@ svg {
       img {
         width: 15%;
         cursor: pointer;
+        @media screen and (max-width: 419px) {
+          width: 40%;
+        }
       }
     }
   }
