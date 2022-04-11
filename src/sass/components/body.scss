@@ -344,6 +344,9 @@ a {
   width: 100%;
   height: initial;
   z-index: 999;
+  path {
+    z-index: 999;
+  }
 }
 
 svg {
