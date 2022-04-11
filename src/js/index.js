@@ -72,7 +72,7 @@ function parallax() {
 /* darker banner */
 
 $(window).scroll(function () {
-  if ($(window).scrollTop() > 700) {
+  if ($(window).scrollTop() > 650) {
     $("#head").addClass("navbar-fixed-top");
     $(".logo").addClass("logo-sticky");
   } else {
