@@ -791,7 +791,6 @@ h1 {
 }
 .skills div:not(.last) .skill img {
   width: 15%;
-  cursor: pointer;
 }
 @media screen and (max-width: 419px) {
   .skills div:not(.last) .skill img {
