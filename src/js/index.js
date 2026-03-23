@@ -1,4 +1,78 @@
 const nav = document.querySelector(".nav");
+const LANGUAGE_STORAGE_KEY = "portfolio-language";
+const DEFAULT_LANGUAGE = "en";
+const SUPPORTED_LANGUAGES = ["en", "es"];
+
+function getInitialLanguage() {
+  const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+  if (savedLanguage && SUPPORTED_LANGUAGES.includes(savedLanguage)) {
+    return savedLanguage;
+  }
+  return DEFAULT_LANGUAGE;
+}
+
+function updateLanguageToggle(currentLanguage) {
+  const languageToggle = document.getElementById("language-toggle");
+  if (!languageToggle) return;
+
+  const nextLanguage = currentLanguage === "en" ? "es" : "en";
+  languageToggle.textContent = nextLanguage.toUpperCase();
+  languageToggle.setAttribute(
+    "aria-label",
+    nextLanguage === "es" ? "Cambiar a español" : "Switch to English"
+  );
+}
+
+function applyTranslations() {
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.getAttribute("data-i18n");
+    element.textContent = i18next.t(key);
+  });
+
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+    const key = element.getAttribute("data-i18n-placeholder");
+    element.setAttribute("placeholder", i18next.t(key));
+  });
+}
+
+async function setupI18n() {
+  const [enResponse, esResponse] = await Promise.all([
+    fetch("./src/locales/en.json"),
+    fetch("./src/locales/es.json"),
+  ]);
+
+  const [enTranslations, esTranslations] = await Promise.all([
+    enResponse.json(),
+    esResponse.json(),
+  ]);
+
+  const language = getInitialLanguage();
+  await i18next.init({
+    lng: language,
+    fallbackLng: "en",
+    resources: {
+      en: { translation: enTranslations },
+      es: { translation: esTranslations },
+    },
+  });
+
+  document.documentElement.lang = language;
+  applyTranslations();
+  updateLanguageToggle(language);
+
+  const languageToggle = document.getElementById("language-toggle");
+  if (languageToggle) {
+    languageToggle.addEventListener("click", async () => {
+      const currentLanguage = i18next.language.startsWith("es") ? "es" : "en";
+      const nextLanguage = currentLanguage === "en" ? "es" : "en";
+      await i18next.changeLanguage(nextLanguage);
+      localStorage.setItem(LANGUAGE_STORAGE_KEY, nextLanguage);
+      document.documentElement.lang = nextLanguage;
+      applyTranslations();
+      updateLanguageToggle(nextLanguage);
+    });
+  }
+}
 
 function toggleMenu() {
   var body = document.body;
@@ -13,7 +87,8 @@ function toggleMenu() {
     : (body.className += "menu-open");
 }
 
-window.onload = function () {
+window.onload = async function () {
+  await setupI18n();
   parallax();
   var hamburger = document.getElementsByClassName("hamburger-menu")[0];
   var menuLinks = document.getElementsByClassName("link");

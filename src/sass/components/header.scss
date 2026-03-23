@@ -8,6 +8,33 @@ header {
   justify-content: center;
 }
 
+.language-toggle {
+  position: fixed;
+  top: 24px;
+  right: 96px;
+  z-index: 1000;
+  border: 1px solid #00adb5;
+  background: rgba(37, 37, 37, 0.85);
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background: #00adb5;
+    transform: translateY(-1px);
+  }
+
+  @media only screen and (max-width: 600px) {
+    top: 18px;
+    right: 78px;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+
 .logo {
   overflow: hidden;
   z-index: 10;

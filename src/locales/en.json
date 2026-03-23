@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "Who am I?",
+    "subtitle": "I'm Guido, a Full Stack Developer",
+    "intro": "I design and build modern web products, from scalable front ends to robust back-end services.",
+    "bio": "I am a Full Stack Developer with 5+ years of professional experience building high-availability web applications. I specialize in scalable front-end architecture, micro frontends, and end-to-end delivery. At LaserAway, I have worked on custom templates, dynamic landing pages, automated email systems, A/B testing and CRO initiatives, and headless integrations with WooCommerce and WordPress APIs. I have also built custom projects with Laravel and Next.js.",
+    "whatHeDoes": "What I do",
+    "programmerTitle": "Full Stack engineer",
+    "programmerText": "I build full stack solutions using React, Next.js, Node.js, Express, Django, PHP, and MySQL. I also develop and optimize WordPress sites with ACF, custom themes, and API integrations. My workflow focuses on clean code, performance, and engineering best practices in agile teams.",
+    "experienceTitle": "Professional impact",
+    "experienceText": "I have delivered high-impact features across marketing and product ecosystems: custom templates, landing pages, automated email systems, A/B testing and CRO initiatives, and headless API integrations for WordPress and WooCommerce."
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "works": {
+    "title": "My Work",
+    "description": "Here are some of the projects I have worked on recently. Most of them were built during my studies over the last few years."
+  },
+  "projects": {
+    "nursery": {
+      "description": "In this project, I built a landing page for a nursery in Miami using Elementor and WordPress."
+    },
+    "kiosko": {
+      "title": "Plant Kiosk",
+      "stack": "Built with Bootstrap, vanilla JS, jQuery, and Sass",
+      "description": "\"Plant Kiosk\" started as a course project and later became a business website. It includes a landing page, shop, and shopping cart."
+    },
+    "memotest": {
+      "stack": "Built with Bootstrap and vanilla JS",
+      "description": "A memory game built with pure JavaScript."
+    },
+    "encuentro": {
+      "stack": "Built with WordPress",
+      "description": "This project is a full website built with WordPress, Elementor, custom blocks, ACF, plus custom CSS and JavaScript."
+    },
+    "beextra": {
+      "title": "Be Extra Miami - Wedding products",
+      "stack": "Built with WordPress",
+      "description": "This is an e-commerce website for wedding products built with WordPress, WooCommerce, and Elementor."
+    },
+    "mkmusic": {
+      "title": "MK Music and Events",
+      "stack": "Built with WordPress",
+      "description": "Corporate website for MK Music and Events, showcasing music and event services. Built on WordPress."
+    },
+    "laseraway": {
+      "title": "LaserAway",
+      "stack": "Built with WordPress, React, Tailwind CSS, and MySQL",
+      "description": "High-traffic aesthetics brand site combining WordPress-backed content, React micro frontends, Tailwind CSS for the UI, and MySQL for data."
+    },
+    "arquitecturaconectiva": {
+      "title": "Arquitectura Conectiva",
+      "stack": "Built with WordPress",
+      "description": "Corporate website for a Costa Rica–based architecture studio focused on conscious, personalized spatial design. Built on WordPress."
+    },
+    "serinstudio": {
+      "title": "Serin Studio",
+      "stack": "Built with WordPress",
+      "description": "Web design and development studio based in Buenos Aires: express pages, custom sites, and client portfolio. Built on WordPress."
+    },
+    "clashvault": {
+      "title": "ClashVault",
+      "stack": "Built with Next.js, Node.js, and Tailwind CSS",
+      "description": "Esports platform with secure escrow, multi-game support, and Solana-based transparency. Built with Next.js, Node.js, and Tailwind CSS."
+    }
+  },
+  "common": {
+    "sourceCode": "Source code",
+    "tryLive": "Try it live"
+  },
+  "contact": {
+    "title": "Do you want to contact me?",
+    "subtitle": "Please use the form below or send me an email:",
+    "recaptcha": "This site is protected by reCAPTCHA",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send"
+    }
+  },
+  "footer": {
+    "rights": "Guido Frassetti - all rights reserved"
+  }
+}

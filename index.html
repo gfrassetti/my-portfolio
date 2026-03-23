@@ -69,6 +69,14 @@
   <body>
     <header id="head">
       <nav id="main-navigation" class="navigation">
+        <button
+          id="language-toggle"
+          class="language-toggle"
+          type="button"
+          aria-label="Switch language"
+        >
+          ES
+        </button>
         <div class="wrapper hamburger-menu">
           <button class="nav">
             <span id="span1"></span>
@@ -78,16 +86,20 @@
         </div>
         <div class="menu-container">
           <ul class="menu">
-            <li class="menu-link"><a class="link" href="#">Home</a></li>
-            <li class="menu-link"><a class="link" href="#about">About</a></li>
             <li class="menu-link">
-              <a class="link" href="#skills">Skills</a>
+              <a class="link" href="#" data-i18n="nav.home">Home</a>
             </li>
             <li class="menu-link">
-              <a class="link" href="#works">Portfolio</a>
+              <a class="link" href="#about" data-i18n="nav.about">About</a>
             </li>
             <li class="menu-link">
-              <a class="link" href="#contact">Contact</a>
+              <a class="link" href="#skills" data-i18n="nav.skills">Skills</a>
+            </li>
+            <li class="menu-link">
+              <a class="link" href="#works" data-i18n="nav.portfolio">Portfolio</a>
+            </li>
+            <li class="menu-link">
+              <a class="link" href="#contact" data-i18n="nav.contact">Contact</a>
             </li>
             <li class="menu-link menu-line"></li>
             <ul style="list-style-type: none">
@@ -165,52 +177,53 @@
           </svg>
         </div>
         <div class="whoIs">
-          <h1 data-aos="zoom-in">Who is he?</h1>
+          <h1 data-aos="zoom-in" data-i18n="about.title">Who is he?</h1>
           <p class="separator"></p>
           <div class="whoIs">
-            <h2 style="font-size: 1.5rem" data-aos="zoom-in">
+            <h2
+              style="font-size: 1.5rem"
+              data-aos="zoom-in"
+              data-i18n="about.subtitle"
+            >
               My name is Guido
             </h2>
-            <p data-aos="fade-right">
+            <p data-aos="fade-right" data-i18n="about.intro">
               I build stuff with HTML, make it pretty with CSS, and break it
               with JS.
             </p>
             <br />
-            <p data-aos="fade-left">
-              I am a web developer, currently working as a Front-end resource in
-              a U.S Company. I live in Buenos Aires, Argentina. My beginnings in
-              the world of programming begin in October 2020, studying and
-              getting into video game development with Unity engine, then
-              Python, Django and finally Front-end development. I can't stop
-              learning new things, inside more better. currently i'm learning
-              back-end development.
+            <p data-aos="fade-left" data-i18n="about.bio">
+              I am a web developer currently working as a front-end developer
+              for a U.S. company. I live in Buenos Aires, Argentina. I started
+              my programming journey in October 2020, first learning game
+              development with the Unity engine, then Python, Django, and
+              finally front-end development. I am always learning, and right
+              now I am improving my back-end skills.
             </p>
           </div>
-          <h3 data-aos="zoom-in">What does he do?</h3>
+          <h3 data-aos="zoom-in" data-i18n="about.whatHeDoes">What does he do?</h3>
           <p class="separator"></p>
           <br />
           <div class="whoAmI">
             <div class="about-me-container">
-              <h3 data-aos="fade-right">I'm a programmer</h3>
-              <p data-aos="fade-right">
-                For the part of the Front-end, I usually work with WordPress and
-                Javascript, plus with some libraries. I also do very nice things
-                with Sass, CSS, and when needed, any of your friends such as
-                Tailwind, Material UI, or Bootstrap to name a few. On a daily
-                basis, I work with a vite - React js stack builduing micro
-                front-end applications.
+              <h3 data-aos="fade-right" data-i18n="about.programmerTitle">I'm a programmer</h3>
+              <p data-aos="fade-right" data-i18n="about.programmerText">
+                On the front end, I usually work with WordPress and JavaScript,
+                along with several libraries. I also build polished interfaces
+                with Sass and CSS, and when needed I use tools like Tailwind,
+                Material UI, and Bootstrap. Day to day, I work with a Vite +
+                React.js stack building micro front-end applications.
               </p>
             </div>
             <div class="about-me-container">
-              <h3 data-aos="fade-left">
-                Also i'm passionate about photography
+              <h3 data-aos="fade-left" data-i18n="about.experienceTitle">
+                Professional impact
               </h3>
-              <p data-aos="fade-left">
-                That's right, photography is one of my great hobbies, the image
-                that can be seen on the cover was taken by me, on my trip
-                through the southern Argentina and edited with Adobe PS and
-                Lightroom. can you see my photo book
-                <a href="https://500px.com/p/GuidoF" target="_blank">Aqui</a>
+              <p data-aos="fade-left" data-i18n="about.experienceText">
+                I have delivered high-impact features across marketing and
+                product ecosystems: custom templates, landing pages, automated
+                email systems, A/B testing and CRO initiatives, and headless
+                API integrations for WordPress and WooCommerce.
               </p>
             </div>
           </div>
@@ -239,68 +252,66 @@
         <div
           class="d-flex justify-content-center flex-column align-items-center"
         >
-          <h3 data-aos="zoom-in" class="skill-title">Skills</h3>
+          <h3 data-aos="zoom-in" class="skill-title" data-i18n="skills.title">Skills</h3>
           <p class="separator"></p>
         </div>
-        <div class="container-fluid">
-          <div class="row" data-aos="zoom-in">
-            <div class="col skill">
-              <img
-                src="./src/images/skills icons/011-wordpress.svg"
-                alt="Wordpress"
-              />
-            </div>
-            <div class="col skill">
-              <img src="./src/images/skills icons/005-unity.svg" alt="unity" />
-            </div>
-            <div class="col skill">
-              <img
-                src="./src/images/skills icons/007-python.svg"
-                alt="python"
-              />
-            </div>
+        <div class="skills-grid" data-aos="zoom-in">
+          <div class="skill">
+            <img
+              src="./src/images/skills icons/011-wordpress.svg"
+              alt="WordPress"
+            />
           </div>
-          <div class="row" data-aos="zoom-in">
-            <div class="col skill">
-              <img
-                src="./src/images/skills icons/icons8-django.svg"
-                alt="django"
-              />
-            </div>
-            <div class="col skill">
-              <img
-                src="./src/images/skills icons/003-nodejs.png"
-                alt="nodejs"
-              />
-            </div>
-            <div class="col skill">
-              <img src="./src/images/skills icons/009-css.svg" alt="css3" />
-            </div>
+          <div class="skill">
+            <img src="./src/images/skills icons/005-unity.svg" alt="Unity" />
           </div>
-          <div class="row" data-aos="zoom-in">
-            <div class="col skill">
-              <img
-                src="./src/images/skills icons/008-js.svg"
-                alt="javascript"
-              />
-            </div>
-            <div class="col skill">
-              <img src="./src/images/skills icons/002-sass.png" alt="sass" />
-            </div>
-            <div class="col skill">
-              <img src="/src/images/skills icons/react-2.svg" alt="react" />
-            </div>
+          <div class="skill">
+            <img src="./src/images/skills icons/007-python.svg" alt="Python" />
           </div>
-          <div class="row last" data-aos="zoom-in">
-            <div class="col skill">
-              <img src="/src/images/skills icons/004-html.png" alt="html5" />
-            </div>
-            <div class="col skill">
-              <img src="./src/images/skills icons/010-git.svg" alt="git" />
-            </div>
-            <div class="col skill">
-              <img src="./src/images/skills icons/001-mysql.svg" alt="mysql" />
-            </div>
+          <div class="skill">
+            <img
+              src="./src/images/skills icons/icons8-django.svg"
+              alt="Django"
+            />
+          </div>
+          <div class="skill">
+            <img
+              src="./src/images/skills icons/003-nodejs.png"
+              alt="Node.js"
+            />
+          </div>
+          <div class="skill">
+            <img src="./src/images/skills icons/009-css.svg" alt="CSS3" />
+          </div>
+          <div class="skill">
+            <img
+              src="./src/images/skills icons/008-js.svg"
+              alt="JavaScript"
+            />
+          </div>
+          <div class="skill">
+            <img src="./src/images/skills icons/002-sass.png" alt="Sass" />
+          </div>
+          <div class="skill">
+            <img src="./src/images/skills icons/react.svg" alt="React" />
+          </div>
+          <div class="skill">
+            <img src="./src/images/skills icons/next.svg" alt="Next.js" />
+          </div>
+          <div class="skill">
+            <img src="./src/images/skills icons/php.png" alt="PHP" />
+          </div>
+          <div class="skill">
+            <img src="./src/images/skills icons/tailwind.svg" alt="Tailwind CSS" />
+          </div>
+          <div class="skill">
+            <img src="./src/images/skills icons/004-html.png" alt="HTML5" />
+          </div>
+          <div class="skill">
+            <img src="./src/images/skills icons/010-git.svg" alt="Git" />
+          </div>
+          <div class="skill">
+            <img src="./src/images/skills icons/001-mysql.svg" alt="MySQL" />
           </div>
         </div>
       </section>
@@ -356,9 +367,9 @@
       <section class="works" id="works">
         <div class="tri-1-wrap"></div>
         <div class="whoIs">
-          <h3 data-aos="zoom-in">My Works</h3>
+          <h3 data-aos="zoom-in" data-i18n="works.title">My Works</h3>
           <p class="separator"></p>
-          <p data-aos="fade-in">
+          <p data-aos="fade-in" data-i18n="works.description">
             Here are some of my projects I have worked on lately. All of them
             were made during my studies these last years.
           </p>
@@ -380,7 +391,7 @@
               <h4 data-aos="zoom-in">Nursery in Miami</h4>
             </div>
             <h5 data-aos="fade-in">Wordpress - Elementor</h5>
-            <p data-aos="fade-in">
+            <p data-aos="fade-in" data-i18n="projects.nursery.description">
               In this project I built a landing page for a nursery in Miami,
               with Elementor and Wordpress.
             </p>
@@ -396,7 +407,7 @@
               > -->
               <a href="https://nurseryinmiami.com/" target="_blank"
                 ><button class="cybr-btn">
-                  <span aria-hidden>Try it live</span>
+                  <span aria-hidden data-i18n="common.tryLive">Try it live</span>
                   <span aria-hidden class="cybr-btn__glitch"
                     >Guido Frassetti</span
                   >
@@ -426,12 +437,12 @@
                 <i class="fab fa-css3-alt"></i>
                 <i class="fa-brands fa-bootstrap"></i>
               </p>
-              <h4 data-aos="zoom-in">Kiosko de plantas</h4>
+              <h4 data-aos="zoom-in" data-i18n="projects.kiosko.title">Kiosko de plantas</h4>
             </div>
-            <h5 data-aos="fade-in">
-              Built with Boostrap, vanilla JS, Jquery, and SASS
+            <h5 data-aos="fade-in" data-i18n="projects.kiosko.stack">
+              Built with Bootstrap, vanilla JS, jQuery, and Sass
             </h5>
-            <p data-aos="fade-in">
+            <p data-aos="fade-in" data-i18n="projects.kiosko.description">
               "Kiosko de plantas" began as a course project, which was turned
               the page for a business. It consists of a landing page, with shop
               and shopping cart
@@ -441,7 +452,7 @@
                 href="https://github.com/gfrassetti/kiosko-de-plantas"
                 target="_blank"
                 ><button class="cybr-btn">
-                  <span aria-hidden>Source Code</span>
+                  <span aria-hidden data-i18n="common.sourceCode">Source Code</span>
                   <span aria-hidden class="cybr-btn__glitch"
                     >Guido Frassetti</span
                   >
@@ -452,7 +463,7 @@
                 href="https://gfrassetti.github.io/kiosko-de-plantas/"
                 target="_blank"
                 ><button class="cybr-btn">
-                  <span aria-hidden>Try it live</span>
+                  <span aria-hidden data-i18n="common.tryLive">Try it live</span>
                   <span aria-hidden class="cybr-btn__glitch"
                     >Guido Frassetti</span
                   >
@@ -480,12 +491,12 @@
               </p>
               <h4 data-aos="zoom-in">Memotest DBZ</h4>
             </div>
-            <h5 data-aos="fade-in">Built with Boostrap, vanilla JS</h5>
-            <p data-aos="fade-in">A memotest game made with pure JS.</p>
+            <h5 data-aos="fade-in" data-i18n="projects.memotest.stack">Built with Bootstrap and vanilla JS</h5>
+            <p data-aos="fade-in" data-i18n="projects.memotest.description">A memotest game made with pure JS.</p>
             <div class="buttons">
               <a href="https://github.com/gfrassetti/memotest" target="_blank"
                 ><button class="cybr-btn">
-                  <span aria-hidden>Source Code</span>
+                  <span aria-hidden data-i18n="common.sourceCode">Source Code</span>
                   <span aria-hidden class="cybr-btn__glitch"
                     >Guido Frassetti</span
                   >
@@ -494,7 +505,7 @@
               >
               <a href="https://gfrassetti.github.io/memotest/" target="_blank"
                 ><button class="cybr-btn">
-                  <span aria-hidden>Try it live</span>
+                  <span aria-hidden data-i18n="common.tryLive">Try it live</span>
                   <span aria-hidden class="cybr-btn__glitch"
                     >Guido Frassetti</span
                   >
@@ -524,8 +535,8 @@
               </p>
               <h4 data-aos="zoom-in">El Encuentro Chile - Paddle</h4>
             </div>
-            <h5 data-aos="fade-in">Built with Wordpress</h5>
-            <p data-aos="fade-in">
+            <h5 data-aos="fade-in" data-i18n="projects.encuentro.stack">Built with Wordpress</h5>
+            <p data-aos="fade-in" data-i18n="projects.encuentro.description">
               This project is a full site made in Wordpress, with Elementor,
               custom blocks, and ACF, plus a custom css and js
             </p>
@@ -543,7 +554,7 @@
               > -->
               <a href="https://elencuentrochile.cl/" target="_blank"
                 ><button class="cybr-btn">
-                  <span aria-hidden>Try it live</span>
+                  <span aria-hidden data-i18n="common.tryLive">Try it live</span>
                   <span aria-hidden class="cybr-btn__glitch"
                     >Guido Frassetti</span
                   >
@@ -567,10 +578,10 @@
               <p class="icons">
                 <i class="fa-brands fa-wordpress"></i>
               </p>
-              <h4 data-aos="zoom-in">Be Extra Miami - Wedding prodcuts</h4>
+              <h4 data-aos="zoom-in" data-i18n="projects.beextra.title">Be Extra Miami - Wedding products</h4>
             </div>
-            <h5 data-aos="fade-in">Built with Wordpress</h5>
-            <p data-aos="fade-in">
+            <h5 data-aos="fade-in" data-i18n="projects.beextra.stack">Built with Wordpress</h5>
+            <p data-aos="fade-in" data-i18n="projects.beextra.description">
               This is a wedding products ecommerce site made in Wordpress, using
               woocommerce, and Elementor.
             </p>
@@ -588,7 +599,291 @@
               > -->
               <a href="https://beextramiami.com/" target="_blank"
                 ><button class="cybr-btn">
-                  <span aria-hidden>Try it live</span>
+                  <span aria-hidden data-i18n="common.tryLive">Try it live</span>
+                  <span aria-hidden class="cybr-btn__glitch"
+                    >Guido Frassetti</span
+                  >
+                  <span aria-hidden class="cybr-btn__tag">R25</span>
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- MK Music and Events -->
+        <div class="project">
+          <a
+            href="https://mkmusicandevents.com/"
+            class="project-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./src/images/mkmusicandevents.svg"
+              alt="MK Music and Events"
+              class="project-img"
+            />
+          </a>
+          <div>
+            <div>
+              <p class="icons">
+                <i class="fa-brands fa-wordpress"></i>
+              </p>
+              <h4 data-aos="zoom-in" data-i18n="projects.mkmusic.title">
+                MK Music and Events
+              </h4>
+            </div>
+            <h5 data-aos="fade-in" data-i18n="projects.mkmusic.stack">
+              Built with WordPress
+            </h5>
+            <p data-aos="fade-in" data-i18n="projects.mkmusic.description">
+              Corporate website for MK Music and Events, showcasing music and
+              event services. Built on WordPress.
+            </p>
+            <div class="buttons">
+              <a href="https://mkmusicandevents.com/" target="_blank" rel="noopener noreferrer"
+                ><button class="cybr-btn" type="button">
+                  <span aria-hidden data-i18n="common.tryLive">Try it live</span>
+                  <span aria-hidden class="cybr-btn__glitch"
+                    >Guido Frassetti</span
+                  >
+                  <span aria-hidden class="cybr-btn__tag">R25</span>
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- LaserAway -->
+        <div class="project">
+          <a
+            href="https://www.laseraway.com/"
+            class="project-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./src/images/laseraway.svg"
+              alt="LaserAway"
+              class="project-img"
+            />
+          </a>
+          <div>
+            <div>
+              <p class="icons">
+                <i class="fa-brands fa-wordpress"></i>
+                <img
+                  class="icons__img"
+                  src="./src/images/skills icons/react.svg"
+                  width="36"
+                  height="36"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <img
+                  class="icons__img"
+                  src="./src/images/skills icons/tailwind.svg"
+                  width="36"
+                  height="36"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <img
+                  class="icons__img"
+                  src="./src/images/skills icons/001-mysql.svg"
+                  width="36"
+                  height="36"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </p>
+              <h4 data-aos="zoom-in" data-i18n="projects.laseraway.title">
+                LaserAway
+              </h4>
+            </div>
+            <h5 data-aos="fade-in" data-i18n="projects.laseraway.stack">
+              Built with WordPress, React, Tailwind CSS, and MySQL
+            </h5>
+            <p data-aos="fade-in" data-i18n="projects.laseraway.description">
+              High-traffic aesthetics brand site: WordPress-backed content,
+              React micro frontends, Tailwind CSS for UI, and MySQL for data.
+            </p>
+            <div class="buttons">
+              <a
+                href="https://www.laseraway.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><button class="cybr-btn" type="button">
+                  <span aria-hidden data-i18n="common.tryLive">Try it live</span>
+                  <span aria-hidden class="cybr-btn__glitch"
+                    >Guido Frassetti</span
+                  >
+                  <span aria-hidden class="cybr-btn__tag">R25</span>
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Arquitectura Conectiva -->
+        <div class="project">
+          <a
+            href="https://arquitecturaconectiva.com/"
+            class="project-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./src/images/arq.png"
+              alt="Arquitectura Conectiva"
+              class="project-img"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <div>
+            <div>
+              <p class="icons">
+                <i class="fa-brands fa-wordpress"></i>
+              </p>
+              <h4 data-aos="zoom-in" data-i18n="projects.arquitecturaconectiva.title">
+                Arquitectura Conectiva
+              </h4>
+            </div>
+            <h5 data-aos="fade-in" data-i18n="projects.arquitecturaconectiva.stack">
+              Built with WordPress
+            </h5>
+            <p data-aos="fade-in" data-i18n="projects.arquitecturaconectiva.description">
+              Corporate website for a Costa Rica–based architecture studio,
+              showcasing conscious, personalized spatial design. Built on
+              WordPress.
+            </p>
+            <div class="buttons">
+              <a
+                href="https://arquitecturaconectiva.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><button class="cybr-btn" type="button">
+                  <span aria-hidden data-i18n="common.tryLive">Try it live</span>
+                  <span aria-hidden class="cybr-btn__glitch"
+                    >Guido Frassetti</span
+                  >
+                  <span aria-hidden class="cybr-btn__tag">R25</span>
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Serin Studio -->
+        <div class="project">
+          <a
+            href="https://serinstudio.com.ar/"
+            class="project-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./src/images/serinstudio.svg"
+              alt="Serin Studio"
+              class="project-img"
+              width="800"
+              height="450"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <div>
+            <div>
+              <p class="icons">
+                <i class="fa-brands fa-wordpress"></i>
+              </p>
+              <h4 data-aos="zoom-in" data-i18n="projects.serinstudio.title">
+                Serin Studio
+              </h4>
+            </div>
+            <h5 data-aos="fade-in" data-i18n="projects.serinstudio.stack">
+              Built with WordPress
+            </h5>
+            <p data-aos="fade-in" data-i18n="projects.serinstudio.description">
+              Web design and development studio site: express pages, custom
+              builds, and client showcase. Built on WordPress.
+            </p>
+            <div class="buttons">
+              <a
+                href="https://serinstudio.com.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><button class="cybr-btn" type="button">
+                  <span aria-hidden data-i18n="common.tryLive">Try it live</span>
+                  <span aria-hidden class="cybr-btn__glitch"
+                    >Guido Frassetti</span
+                  >
+                  <span aria-hidden class="cybr-btn__tag">R25</span>
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- ClashVault -->
+        <div class="project">
+          <a
+            href="https://www.clashvault.gg/"
+            class="project-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./src/images/clashvault_portrait.png"
+              alt="ClashVault"
+              class="project-img"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <div>
+            <div>
+              <p class="icons">
+                <img
+                  class="icons__img"
+                  src="./src/images/skills icons/next.svg"
+                  width="36"
+                  height="36"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <img
+                  class="icons__img icons__img--png"
+                  src="./src/images/skills icons/003-nodejs.png"
+                  width="36"
+                  height="36"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <img
+                  class="icons__img"
+                  src="./src/images/skills icons/tailwind.svg"
+                  width="36"
+                  height="36"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </p>
+              <h4 data-aos="zoom-in" data-i18n="projects.clashvault.title">
+                ClashVault
+              </h4>
+            </div>
+            <h5 data-aos="fade-in" data-i18n="projects.clashvault.stack">
+              Built with Next.js, Node.js, and Tailwind CSS
+            </h5>
+            <p data-aos="fade-in" data-i18n="projects.clashvault.description">
+              Esports platform with secure escrow, multi-game support, and
+              blockchain-backed transparency. Built with Next.js, Node.js, and
+              Tailwind CSS.
+            </p>
+            <div class="buttons">
+              <a
+                href="https://www.clashvault.gg/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><button class="cybr-btn" type="button">
+                  <span aria-hidden data-i18n="common.tryLive">Try it live</span>
                   <span aria-hidden class="cybr-btn__glitch"
                     >Guido Frassetti</span
                   >
@@ -638,21 +933,22 @@
       <footer id="contact">
         <div class="form-contact">
           <h3 class="contact-title" data-aos="zoom-in">
-            Do you want to contact me?
+            <span data-i18n="contact.title">Do you want to contact me?</span>
           </h3>
           <p class="separator"></p>
-          <p data-aos="zoom-in">Please, use the form below or send an email:</p>
+          <p data-aos="zoom-in" data-i18n="contact.subtitle">Please, use the form below or send an email:</p>
         </div>
         <section class="contact-section">
           <div class="form-container container" data-aos="fade-up">
             <form method="POST" action="https://formspree.io/f/moqrkvwl">
-              <input type="text" placeholder="Nombre" id="name" required />
+              <input type="text" placeholder="Nombre" id="name" required data-i18n-placeholder="contact.form.name" />
               <input
                 type="email"
                 name="email"
                 id="email"
                 placeholder="Email"
                 required
+                data-i18n-placeholder="contact.form.email"
               />
               <textarea
                 required
@@ -662,6 +958,7 @@
                 rows="5"
                 type="text"
                 placeholder="Mensaje"
+                data-i18n-placeholder="contact.form.message"
               ></textarea>
               <button
                 class="cybr-btn"
@@ -669,13 +966,13 @@
                 id="submit-form"
                 data-aos="fade-up"
               >
-                <span aria-hidden>Enviar</span>
+                <span aria-hidden data-i18n="contact.form.send">Enviar</span>
                 <span aria-hidden class="cybr-btn__glitch"
                   >Guido Frassetti</span
                 >
                 <span aria-hidden class="cybr-btn__tag">R25</span>
               </button>
-              <span data-aos="fade-right"
+              <span data-aos="fade-right" data-i18n="contact.recaptcha"
                 >This site is protected by reCAPTCHA</span
               >
             </form>
@@ -692,8 +989,8 @@
         </section>
         <div id="github">
           <p>
-            <i class="fa-solid fa-copyright"></i> Guido Frassetti - all rights
-            reserved
+            <i class="fa-solid fa-copyright"></i>
+            <span data-i18n="footer.rights">Guido Frassetti - all rights reserved</span>
           </p>
           <a href="https://github.com/gfrassetti" target="_blank">
             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -719,6 +1016,7 @@
       async
     ></script>
     <script src="https://s.electerious.com/basicScroll/dist/basicScroll.min.js"></script>
+    <script src="https://unpkg.com/i18next@23.16.5/dist/umd/i18next.min.js"></script>
     <script src="./src/js/index.js"></script>
     <script>
       AOS.init({

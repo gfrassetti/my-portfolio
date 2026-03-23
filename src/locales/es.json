@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "portfolio": "Portfolio",
+    "contact": "Contacto"
+  },
+  "about": {
+    "title": "¿Quién soy?",
+    "subtitle": "Soy Guido, desarrollador Full Stack",
+    "intro": "Diseño y construyo productos web modernos, desde front ends escalables hasta servicios back-end robustos.",
+    "bio": "Soy desarrollador Full Stack con más de 5 años de experiencia profesional construyendo aplicaciones web de alta disponibilidad. Me especializo en arquitectura front-end escalable, micro frontends y entrega end-to-end. En LaserAway trabajé en templates personalizados, landing pages dinámicas, automatización de emails, estrategias de A/B testing y CRO, e integraciones headless con APIs de WooCommerce y WordPress. También desarrollé proyectos personalizados con Laravel y Next.js.",
+    "whatHeDoes": "Qué hago",
+    "programmerTitle": "Ingeniero Full Stack",
+    "programmerText": "Desarrollo soluciones full stack con React, Next.js, Node.js, Express, Django, PHP y MySQL. También creo y optimizo sitios WordPress con ACF, themes personalizados e integraciones por API. Mi enfoque está en código limpio, performance y buenas prácticas de ingeniería dentro de equipos ágiles.",
+    "experienceTitle": "Impacto profesional",
+    "experienceText": "He entregado funcionalidades de alto impacto en ecosistemas de marketing y producto: templates personalizados, landing pages, automatización de emails, iniciativas de A/B testing y CRO, e integraciones API headless para WordPress y WooCommerce."
+  },
+  "skills": {
+    "title": "Habilidades"
+  },
+  "works": {
+    "title": "Mis trabajos",
+    "description": "Aquí están algunos de los proyectos en los que trabajé recientemente. La mayoría fueron creados durante mis estudios en los últimos años."
+  },
+  "projects": {
+    "nursery": {
+      "description": "En este proyecto desarrollé una landing page para un vivero en Miami usando Elementor y WordPress."
+    },
+    "kiosko": {
+      "title": "Kiosko de plantas",
+      "stack": "Construido con Bootstrap, JS vanilla, jQuery y Sass",
+      "description": "\"Kiosko de plantas\" comenzó como un proyecto de curso y luego se transformó en una web para un negocio. Incluye landing page, tienda y carrito de compras."
+    },
+    "memotest": {
+      "stack": "Construido con Bootstrap y JS vanilla",
+      "description": "Un juego de memoria hecho con JavaScript puro."
+    },
+    "encuentro": {
+      "stack": "Construido con WordPress",
+      "description": "Este proyecto es un sitio web completo hecho en WordPress, con Elementor, bloques personalizados, ACF y CSS/JavaScript personalizados."
+    },
+    "beextra": {
+      "title": "Be Extra Miami - Productos para bodas",
+      "stack": "Construido con WordPress",
+      "description": "Este es un e-commerce de productos para bodas hecho en WordPress, con WooCommerce y Elementor."
+    },
+    "mkmusic": {
+      "title": "MK Music and Events",
+      "stack": "Construido con WordPress",
+      "description": "Sitio corporativo de MK Music and Events para mostrar servicios de música y eventos. Desarrollado en WordPress."
+    },
+    "laseraway": {
+      "title": "LaserAway",
+      "stack": "Construido con WordPress, React, Tailwind CSS y MySQL",
+      "description": "Sitio de marca de alto tráfico que combina contenido en WordPress, micro frontends con React, Tailwind CSS en la interfaz y MySQL para los datos."
+    },
+    "arquitecturaconectiva": {
+      "title": "Arquitectura Conectiva",
+      "stack": "Construido con WordPress",
+      "description": "Sitio corporativo para un estudio de arquitectura en Costa Rica, enfocado en diseño de espacios conscientes y personalizados. Desarrollado en WordPress."
+    },
+    "serinstudio": {
+      "title": "Serin Studio",
+      "stack": "Construido con WordPress",
+      "description": "Sitio del estudio de diseño y desarrollo web en Buenos Aires: páginas express, proyectos a medida y portfolio de clientes. Desarrollado en WordPress."
+    },
+    "clashvault": {
+      "title": "ClashVault",
+      "stack": "Construido con Next.js, Node.js y Tailwind CSS",
+      "description": "Plataforma de esports con escrow seguro, soporte multijuego y transparencia basada en Solana. Desarrollada con Next.js, Node.js y Tailwind CSS."
+    }
+  },
+  "common": {
+    "sourceCode": "Código fuente",
+    "tryLive": "Ver online"
+  },
+  "contact": {
+    "title": "¿Quieres contactarme?",
+    "subtitle": "Usa el siguiente formulario o envíame un correo:",
+    "recaptcha": "Este sitio está protegido por reCAPTCHA",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "send": "Enviar"
+    }
+  },
+  "footer": {
+    "rights": "Guido Frassetti - todos los derechos reservados"
+  }
+}
